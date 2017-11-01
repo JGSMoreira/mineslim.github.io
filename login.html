@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="utf-8">
+	</head>
+	<style>
+		#coiso{
+			position: absolute;
+			margin: auto;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 400px;
+			height: 300px;
+			background-color: #f2f2f2;
+			border-radius: 3px;
+		}
+		#acao{
+			float: center;
+			padding-top: 13%;
+			width: 430px;
+		}
+	</style>
+
+	<body style="background: url(img/fundinho.jpg); background-repeat: no-repeat; background-size: cover">
+		
+		<div>
+			<div class="container" id="acao"></div>
+			<div class="container rounded" id="coiso">
+				<h2 class="display-4">Login</h2>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" class="form-control" name="email" id="email">
+				</div>
+				<div class="form-group">
+					<label for="senha">Senha</label>
+					<input type="password" class="form-control" name="senha" id="senha">
+				</div>
+				<button type="button" class="btn btn-primary btn-block" onclick="Autentica()">Login</button>
+			</div>
+		</div>
+
+		<script>
+			function Autentica(){
+				email = document.getElementById('email').value;
+				senha = document.getElementById('senha').value;
+				if (email == "mine.slimrt@gmail.com"){
+					if (senha == "147963"){
+						Logado();
+					}
+					else{
+						SenhaErrada();
+					}
+				}
+				else{
+					NaoCad();
+				}
+
+			}
+			function Logado(){
+				document.getElementById("acao").innerHTML = '<div class="alert alert-success" role="alert">Agora você está logado!<a href="index.html" class="alert-link"> Ir para home.</div>';
+			}
+			function NaoCad(){
+				document.getElementById("acao").innerHTML = '<div class="alert alert-danger" role="alert">Usuário não cadastrado!</div>';
+			}
+			function SenhaErrada(){
+				document.getElementById("acao").innerHTML = '<div class="alert alert-danger" role="alert">Senha incorreta!</div>';
+			}
+		</script>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	</body>
+</html>

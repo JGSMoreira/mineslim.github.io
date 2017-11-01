@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>Calculadora - 2 termos</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="jumbotron rounded-0">
+			<h1 class="display-3">Calculadora - 2 termos</h1>
+			<p class="lead">A calculdora funciona de uma forma simples, realizando os calculos utilizando dois termos.</p>
+		</div>
+
+		<div class="container rounded" style="background-color: #f2f2f2">
+			<p class="display-4">Soma</p>
+			<label for="x">Digite o valor de x:</label>
+			<input type="text" class="form-control" id="xSoma">
+			<label for="y">Digite o valor de y:</label>
+			<input type="text" class="form-control" id="ySoma">
+			<div id="resultSoma"></div>
+			<hr>
+			<button type="button" class="btn btn-primary btn-block" onclick="Soma()">Somar</button>
+			<p> </p>
+		</div>
+
+		<div class="container rounded" style="background-color: #f2f2f2">
+			<p class="display-4">Subtração</p>
+			<label for="x">Digite o valor de x:</label>
+			<input type="text" class="form-control" id="xSub">
+			<label for="y">Digite o valor de y:</label>
+			<input type="text" class="form-control" id="ySub">
+			<div id="resultSub"></div>
+			<hr>
+			<button type="button" class="btn btn-primary btn-block" onclick="Subtracao()">Subtrair</button>
+			<p> </p>
+		</div>
+
+		<div class="container rounded" style="background-color: #f2f2f2">
+			<p class="display-4">Multiplicação</p>
+			<label for="x">Digite o valor de x:</label>
+			<input type="text" class="form-control" id="xMulti">
+			<label for="y">Digite o valor de y:</label>
+			<input type="text" class="form-control" id="yMulti">
+			<div id="resultMulti"></div>
+			<hr>
+			<button type="button" class="btn btn-primary btn-block" onclick="Multiplicacao()">Multiplicar</button>
+			<p> </p>
+		</div>
+
+		<div class="container rounded" style="background-color: #f2f2f2">
+			<p class="display-4">Divisão</p>
+			<label for="x">Digite o valor de x:</label>
+			<input type="text" class="form-control" id="xDiv">
+			<label for="y">Digite o valor de y:</label>
+			<input type="text" class="form-control" id="yDiv">
+			<div id="resultDiv"></div>
+			<hr>
+			<button type="button" class="btn btn-primary btn-block" onclick="Divisao()">Dividir</button>
+			<p> </p>
+		</div>
+
+		<div class="container rounded" style="background-color: #f2f2f2">
+			<p class="display-4">Como é calculado?</p>
+			<p class="lead"> É sempre o termo x pelo termo y! Por exemplo: x + y.</p>
+			<a class="btn btn-primary btn-block" href="index.html">Home</a>
+			<p> </p>
+		</div>		
+
+		<script>
+			function Soma(){
+				x = document.getElementById('xSoma').value;
+				y = document.getElementById('ySoma').value;
+				z =  parseFloat(x) + parseFloat(y);
+				e = "Resultado da soma: " + z;
+				document.getElementById("resultSoma").innerHTML = '<br><div class="alert alert-primary" role="alert">' + e + '</div>';
+			}
+			function Subtracao(){
+				x = document.getElementById('xSub').value;
+				y = document.getElementById('ySub').value;
+				z =  parseFloat(x) - parseFloat(y);
+				e = "Resultado da subtração: " + z;
+				document.getElementById("resultSub").innerHTML = '<br><div class="alert alert-primary" role="alert">' + e + '</div>';
+			}
+			function Multiplicacao(){
+				x = document.getElementById('xMulti').value;
+				y = document.getElementById('yMulti').value;
+				z =  parseFloat(x) * parseFloat(y);
+				e = "Resultado da multiplicação: " + z;
+				document.getElementById("resultMulti").innerHTML = '<br><div class="alert alert-primary" role="alert">' + e + '</div>';
+			}
+			function Divisao(){
+				x = document.getElementById('xDiv').value;
+				y = document.getElementById('yDiv').value;
+				z =  parseFloat(x) / parseFloat(y);
+				e = "Resultado da divisão: " + z;
+				document.getElementById("resultDiv").innerHTML = '<br><div class="alert alert-primary" role="alert">' + e + '</div>';
+			}
+		</script>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	</body>
+</html>
